@@ -2,4 +2,8 @@
 
 .site-footer {
 
+  @include mq(lg) {
+    padding-top: 7.5rem;
+  }
+
 }

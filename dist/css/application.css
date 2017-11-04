@@ -1757,6 +1757,12 @@ a.button {
           flex: 1 0 auto;
 }
 
+@media all and (min-width: 1025px) {
+  .site-footer {
+    padding-top: 7.5rem;
+  }
+}
+
 .promo-slider__item {
   position: relative;
   min-height: 52rem;
@@ -1926,6 +1932,12 @@ a.button {
   background: #fff;
 }
 
+@media all and (min-width: 1025px) {
+  .section-box--alt-background {
+    padding: 7.5rem 0;
+  }
+}
+
 .section-box__header > h2 {
   font-family: "Fira Sans Condensed", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3rem;
@@ -1963,6 +1975,10 @@ a.button {
 .section-box__next-link {
   font-size: 1.2rem;
   line-height: 1.25;
+  position: relative;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: block;
   color: #01244e;
   text-decoration: none;
@@ -2408,4 +2424,171 @@ a.button {
   border-radius: 50%;
   background: #b2c1d3;
   content: '';
+}
+
+@media all and (min-width: 1025px) {
+  .news__main-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .news__top-news-col {
+    margin-bottom: -2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .news__top-news-col {
+    width: 40rem;
+    padding-right: 2rem;
+  }
+}
+
+.news__top-news-col > article > a > header > h4 {
+  font-size: 3rem;
+  line-height: 1.06667;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.news__all-news-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.news__all-news-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media all and (max-width: 767px) {
+  .news__all-news-grid {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .news__all-news-grid {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .news__all-news-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 767px) {
+  .news__all-news-grid {
+    margin-right: -2rem;
+    margin-left: -2rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (min-width: 1025px) {
+  .news__all-news-grid {
+    margin-right: -2rem;
+    margin-left: -2rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .news__all-news-item {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (max-width: 767px) and (max-width: 767px) {
+  .news__all-news-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 1025px) {
+  .news__all-news-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .news__all-news-item {
+    width: 25%;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 767px) {
+  .news__all-news-item {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (min-width: 1025px) {
+  .news__all-news-item {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.news .article > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news .article > a > header {
+  margin-bottom: .7rem;
+}
+
+.news .article > a > header > h4 {
+  font-size: 1.9rem;
+  line-height: 1.21053;
+  color: #004699;
+  margin-bottom: .5rem;
+}
+
+.news .article > a > header time {
+  font-size: 1.3rem;
+  line-height: 1.53846;
+  display: block;
+  font-family: "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #8597af;
+}
+
+.news__description {
+  font-size: 1.3rem;
+  line-height: 1.53846;
+  color: #4e78aa;
 }

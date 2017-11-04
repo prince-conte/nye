@@ -12,6 +12,10 @@
 
   &--alt-background {
     background: #fff;
+
+    @include mq(lg) {
+      padding: 7.5rem 0;
+    }
   }
 
   &__header {
@@ -41,6 +45,8 @@
   &__next-link {
     @include font(1.2rem,1.5rem);
     @include interact(color,$color-light);
+    position: relative;
+    align-items: flex-start;
     display: block;
     color: $color-brand;
     text-decoration: none;
