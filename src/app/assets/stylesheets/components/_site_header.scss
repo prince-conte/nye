@@ -1,5 +1,49 @@
 @charset "UTF-8";
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  z-index: 99;
 
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    height: 7.5rem;
+    background: #fff;
+
+    > img {
+      width: auto;
+      vertical-align: top;
+    }
+  }
+
+  &__menu-button {
+    @include size(7.5rem);
+    position: relative;
+    background: $color-brand;
+  }
+
+  &__burger-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.6rem;
+    transform: translate(-50%,-50%);
+
+    > span {
+      display: block;
+      height: .2rem;
+      background: #fff;
+
+      &:not(:last-child) {
+        margin-bottom: .3rem;
+      }
+
+    }
+  }
 }

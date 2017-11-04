@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.section-box {
+
+  @include mq(lg) {
+    margin: 7.5rem 0;
+  }
+
+}

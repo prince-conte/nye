@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,700|Open+Sans:300,400');
 
 // Responsive
 $mq-breakpoints: ( // for example: xs, sm, md, lg, xl
@@ -43,6 +43,7 @@ $border-radius-lg: .75rem;
 
 // Colors
 $color-base:     #4e78aa;
+$color-bg:     #dfebf7;
 $color-base-title:     #004699;
 $color-light:    #8597af;
 $color-lighter:  rgba($color-base, .6);
@@ -56,9 +57,10 @@ $color-success:  green;
 
 // Fonts
 $font-family-text:  'Fira Sans Condensed', "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-family-alt:  'Open Sans', "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-family-title: $font-family-text;
-$font-weight-text:  400;
-$font-weight-title: 700;
+$font-weight-text:  300;
+$font-weight-title: 300;
 
 // Forms
 $checkbox-size: 2rem;

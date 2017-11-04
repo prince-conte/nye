@@ -2,12 +2,16 @@
 
 @if $enable-icons == true {
     .icon {
-        fill: $color-base;
+        fill: #fff;
         fill-rule: evenodd;
         transition: fill $transition-duration-base;
 
         &--20 {
             @include size(2rem);
+        }
+
+        &--60 {
+            @include size(6rem);
         }
     }
 }

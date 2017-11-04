@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .promo-slider {
-  background-color: $color-base;
+  //background-color: $color-base;
 
 
   &__item {
@@ -18,10 +18,131 @@
       min-height: 76.8rem;
     }
 
-    > img {
+    img {
       width: 100%;
       height: auto;
       vertical-align: top;
+    }
+  }
+
+  &__content {
+    @include size(100%, auto);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 0 2.4rem;
+    background: rgba($color-brand, .6);
+
+    article {
+      color: #fff;
+
+      > header {
+        > h1 {
+          @include font(3.4rem,3rem);
+          text-transform: uppercase;
+          font-weight: 300;
+          color: #fff;
+        }
+
+        > p {
+          @include font(1.3rem,3rem);
+          font-weight: 600;
+        }
+      }
+
+      > p {
+        @include text-sm;
+        font-family: $font-family-alt;
+        color: rgba(#fff,.5);
+      }
+    }
+  }
+
+  // slick overrides
+
+  .slick-dots {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    > li {
+      @include size(.7rem);
+      border-radius: 50%;
+      background: rgba(#fff,.5);
+
+      &:not(:last-child) {
+        margin-right: 2.2rem;
+      }
+
+      &.slick-active {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.promo-information {
+
+
+  margin-top: 1.2rem;
+
+  &__grid {
+    @include mq(lg) {
+      display: flex;
+      border: 1px solid #fff;
+    }
+  }
+
+  &__col-1-5 {
+    padding: 1rem;
+
+    @include mq(lg) {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      width: 20%;
+
+      &:not(:last-child) {
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: #fff;
+
+    > h6 {
+      @include font(1.3rem,2.1rem);
+      text-transform: uppercase;
+    }
+  }
+
+  &__item-description {
+    @include font(1.1rem, 1.4rem);
+    margin-top: auto;
+
+    > i {
+      @include font(2rem,2.1rem);
+      font-style: normal;
+      font-weight: 300;
+    }
+  }
+
+  &__item-icon {
+    @include size(6rem);
+
+    svg {
+      fill: #fff;
     }
   }
 }

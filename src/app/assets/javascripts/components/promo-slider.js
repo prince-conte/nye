@@ -8,11 +8,11 @@ $( function() {
         var headerHeight = $('.js-site-header').outerHeight();
         var promoHeight = windowHeight;
 
-        $('.js-promo-slider .js-promo-slider-item').each(function() {
-            slidesCountry = slidesCountry + 1;
-        });
-
-        slidesCountry = slidesCountry - 1;
+        // $('.js-promo-slider .js-promo-slider-item').each(function() {
+        //     slidesCountry = slidesCountry + 1;
+        // });
+        //
+        // slidesCountry = slidesCountry - 1;
 
         $('.js-promo-slider-item').css('height' , promoHeight);
 
@@ -34,15 +34,13 @@ $( function() {
     // });
 
     $('.js-promo-slider').slick({
-        infinite: false,
+        infinite: true,
         cssEase: 'ease',
         speed: 660,
         slidesToShow: 1,
         easing: 'linear',
         arrows: false,
         dots: true,
-        // nextArrow: '<a class="slick-next" href="#"><svg role="img" data-color="1"> <use xlink:href="/assets/icons/48icons.svg#icon-48-3"></use></svg></a>',
-        // prevArrow: '<a class="slick-prev" href="#"><svg role="img" data-color="1"> <use xlink:href="/assets/icons/48icons.svg#icon-48-3"></use></svg></a>',
         customPaging: function(slider, i) {
             return $('<span></span>');
         },
