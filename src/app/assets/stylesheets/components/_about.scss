@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.about {
+
+  &__main-grid {
+
+    @include mq(lg) {
+
+      @include grid();
+    }
+
+  }
+
+  &__main-grid-col {
+
+    @include mq(lg) {
+      @include grid-col();
+      @include col-size(1/2)
+    }
+
+    > p {
+      @include text-sm;
+      font-family: $font-family-alt;
+
+      &:not(:first-child) {
+        margin-top: 2.4rem;
+      }
+    }
+  }
+
+  &__title {
+    @include font(1.9rem,3rem);
+    margin-bottom: 2rem;
+    color: $color-base-title;
+  }
+
+
+
+}
