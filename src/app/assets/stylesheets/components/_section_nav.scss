@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.section-nav {
+  display: flex;
+
+  > li {
+    padding: 0 2.5rem;
+
+    &:not(:last-child) {
+
+      @include mq(sm) {
+        margin-bottom: 1rem;
+      }
+
+      @include mq(lg) {
+        padding-right: 1.9rem;
+        border-right: .1rem solid $color-light;
+      }
+    }
+
+    > a {
+      @include font(1.2rem,1.5rem);
+      @include interact(color,$color-light);
+      display: block;
+      color: $color-brand;
+      text-decoration: none;
+    }
+
+    &.is-current {
+      > a {
+        color: $color-light;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+
+}

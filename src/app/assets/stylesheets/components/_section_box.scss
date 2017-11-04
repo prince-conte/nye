@@ -10,4 +10,28 @@
     margin-top: 0;
   }
 
+  &__header {
+
+    > h2 {
+      @include h2;
+      color: $color-base-title;
+      text-transform: uppercase;
+
+      @include mq(sm) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include mq(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  &__nav-box {
+
+  }
+
 }
