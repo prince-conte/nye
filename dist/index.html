@@ -13,10 +13,19 @@
     <script src="js/modernizr.js"></script>
   </head>
   <body>
-    <header class="site-header js-site-header"><a class="site-header__menu-button" href="#">
-        <div class="site-header__burger-box"><span></span><span></span><span></span></div></a><a class="site-header__logo" href="index.html"><img src="img/logo.svg" alt="logo"></a></header>
+    <header class="site-header js-site-header"><a class="site-header__menu-button js-open-menu" href="#">
+        <div class="site-header__burger-box"><span></span><span></span><span></span></div></a>
+      <nav class="site-navigate js-site-navigate">
+        <ul>
+          <li><a href="#project">PROYECTOS REALIZADOS</a></li>
+          <li><a href="#articles">ACCIONISTAS E INVERSORES</a></li>
+          <li><a href="#news">NOTICIAS</a></li>
+          <li><a href="#contacts">CONTACTO</a></li>
+        </ul>
+      </nav><a class="site-header__logo" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+    </header>
     <main class="site-main">
-      <div class="section-box section-box--promo">
+      <div class="section-box section-box--promo" id="home">
         <div class="promo-slider js-promo-slider">
           <div class="promo-slider__item js-promo-slider-item" style="background-image: url(img/slide-1.jpg);">
             <div class="promo-slider__mobile-image" style="background-image: url(img/slide-1m.jpg);"></div>
@@ -226,7 +235,7 @@
           </div>
         </div>
       </div>
-      <div class="section-box">
+      <div class="section-box" id="project">
         <div class="container">
           <div class="projects">
             <div class="section-box__header">
@@ -292,12 +301,21 @@
           </div>
         </div>
       </div>
-      <div class="section-box">
+      <div class="section-box" id="articles">
         <div class="container">
           <div class="articles">
             <div class="section-box__header">
               <h2 class="projects__title">ACCIONISTAS E INVERSORES</h2>
-              <div class="section-box__nav-box"><a class="section-box__next-link" href="#">TODAS LAS CATEGORIAS</a></div>
+              <div class="section-box__nav-box"><a class="section-box__next-link js-open-section-next-menu" href="#"><span>TODAS LAS CATEGORIAS</span></a>
+                <ul class="section-next-menu js-section-next-menu">
+                  <li><a href="#">AGENDA DEL INVERSOR</a></li>
+                  <li><a href="#">LA ACCION</a></li>
+                  <li class="is-disable"><a href="#">LA ACCION Y SU CAPITAL SICIAL</a></li>
+                  <li class="is-disable"><a href="#">REMUNERACION AL ACCIONISTA</a></li>
+                  <li class="is-disable"><a href="#">COTIZACION</a></li>
+                  <li class="is-disable"><a href="#">COBERTURA DE ANALISTAS</a></li>
+                </ul>
+              </div>
             </div>
             <div class="articles__grid">
               <div class="articles__col">
@@ -394,7 +412,7 @@
           </div>
         </div>
       </div>
-      <div class="section-box section-box--alt-background">
+      <div class="section-box section-box--alt-background js-alter-section" id="news">
         <div class="container">
           <div class="news">
             <div class="section-box__header">
@@ -451,7 +469,7 @@
         </div>
       </div>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer js-alter-section" id="contacts">
       <div class="container">
         <div class="site-footer__main-grid">
           <div class="site-footer__contacts-col">

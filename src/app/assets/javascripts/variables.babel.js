@@ -7,3 +7,5 @@ createMq([
 ]);
 
 const TRANSITION_DURATION_BASE = 400;
+const siteGutter = 20;
+

@@ -30,6 +30,7 @@
           "src/app/assets/javascripts/components/jquery_ui/selectmenu.babel.js",
           "src/app/assets/javascripts/components/icons.babel.js",
           "src/app/assets/javascripts/components/wysiwyg.babel.js",
+          "src/app/assets/javascripts/components/site-navigate.js",
           "src/app/assets/javascripts/components/promo-slider.js"
         ],
         "concat": "application.js",

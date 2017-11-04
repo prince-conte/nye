@@ -1,4 +1,4 @@
-.section-box
+.section-box#articles
     .container
         .articles
 
@@ -6,7 +6,27 @@
                 h2.projects__title ACCIONISTAS E INVERSORES
 
                 .section-box__nav-box
-                    a.section-box__next-link(href='#') TODAS LAS CATEGORIAS
+                    a.section-box__next-link.js-open-section-next-menu(href='#')
+                        span TODAS LAS CATEGORIAS
+                    ul.section-next-menu.js-section-next-menu
+
+                        li
+                            a(href='#') AGENDA DEL INVERSOR
+
+                        li
+                            a(href='#') LA ACCION
+
+                        li.is-disable
+                            a(href='#') LA ACCION Y SU CAPITAL SICIAL
+
+                        li.is-disable
+                            a(href='#') REMUNERACION AL ACCIONISTA
+
+                        li.is-disable
+                            a(href='#') COTIZACION
+
+                        li.is-disable
+                            a(href='#') COBERTURA DE ANALISTAS
 
             .articles__grid
 

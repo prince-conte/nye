@@ -7,6 +7,7 @@
             width: 100%;
             padding: 0 0 .9rem;
             border-bottom: 1px solid $color-lighter;
+            transition: all $transition-duration-base;
 
             &::placeholder {
                 color: $color-lighter;

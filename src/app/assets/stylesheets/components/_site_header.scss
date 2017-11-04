@@ -13,6 +13,10 @@
     background: #fff;
   }
 
+  &__logo, &__menu-button {
+    z-index: 10;
+  }
+
 
   &__logo {
     display: flex;
@@ -33,6 +37,23 @@
     position: relative;
     background: $color-brand;
     transition: background $transition-duration-base;
+
+    &.is-active {
+
+      .site-header__burger-box {
+
+        > span {
+
+          &:nth-child(1) {
+            transform: translateY(calc(100% + .3rem));
+          }
+
+          &:nth-child(3) {
+            transform: translateY(calc(-100% - .3rem));
+          }
+        }
+      }
+    }
   }
 
   &__burger-box {
@@ -46,11 +67,11 @@
       display: block;
       height: .2rem;
       background: #fff;
+      transition: $transition-duration-base;
 
       &:not(:last-child) {
         margin-bottom: .3rem;
       }
-
     }
   }
 }

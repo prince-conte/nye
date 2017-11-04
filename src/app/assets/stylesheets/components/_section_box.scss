@@ -41,7 +41,7 @@
   }
 
   &__nav-box {
-
+    position: relative;
   }
 
   &__next-link {
@@ -69,8 +69,72 @@
         image: url(../img/arrowright.png);
       };
       content: '';
+    }
 
-
+    &.is-active {
+      + .section-next-menu {
+        display: block;
+      }
     }
   }
+}
+
+.section-next-menu {
+  @include size(22rem, auto);
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  max-height: 18rem;
+  transform: translateY(100%);
+  overflow-y: auto;
+  display: none;
+  z-index: 55;
+
+  @include mq(lg) {
+    left: auto;
+    right: 0;
+  }
+
+  > li {
+
+    &:not(:last-child) {
+      > a {
+        border-bottom: 1px solid #e5eff9;
+      }
+    }
+
+    &.is-current {
+
+      > a {
+        color: $color-light;
+      }
+    }
+
+    > a {
+      @include interact(color, $color-brand);
+      @include font(1.4rem,1.4rem);
+      @include ellipsis();
+      padding: .8rem 1rem .7rem;
+      display: block;
+      background: #fff;
+      color: $color-base;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+   &.is-disable {
+
+     > a {
+       @include font(1.1rem,1.1rem);
+       color: $color-light;
+       padding: 1rem 1rem .8rem;
+       background: #f5f9fd;
+       cursor: default;
+       pointer-events: none;
+     }
+   }
+  }
+
+
+
 }

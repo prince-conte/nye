@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.site-navigate {
+  @include size(27rem,auto);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  background: $color-brand;
+  transition: $transition-duration-base;
+  transform: translateY(-100%);
+  z-index: 9;
+
+  &.is-active {
+    top: 100%;
+    transform: translateY(0);
+  }
+
+  > ul {
+
+    > li {
+
+      &.is-current {
+
+        > a {
+          color: $color-light;
+        }
+      }
+
+      > a {
+        @include interact(color, $color-light);
+        padding: 1.5rem;
+        display: block;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}
