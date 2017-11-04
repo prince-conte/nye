@@ -245,6 +245,14 @@ $(function () {
 
         return false;
     });
+
+    $(document).mouseup(function (e) {
+        var popup = $('.js-section-next-menu');
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+            $('.js-open-menu').removeClass('is-active');
+            $('.js-site-navigate').removeClass('is-active');
+        }
+    });
 });
 
 $(function () {
