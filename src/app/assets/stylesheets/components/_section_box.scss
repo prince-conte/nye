@@ -10,6 +10,10 @@
     margin-top: 0;
   }
 
+  &--alt-background {
+    background: #fff;
+  }
+
   &__header {
 
     > h2 {
@@ -34,4 +38,27 @@
 
   }
 
+  &__next-link {
+    @include font(1.2rem,1.5rem);
+    @include interact(color,$color-light);
+    display: block;
+    color: $color-brand;
+    text-decoration: none;
+
+    &::after {
+      @include size(.5rem,.9rem);
+      display:inline-block;
+      margin-left: .7rem;
+      transform: translateY(-.05rem);
+      background: {
+        position: 50% 50%;
+        size: contain;
+        repeat: no-repeat;
+        image: url(../img/arrowright.png);
+      };
+      content: '';
+
+
+    }
+  }
 }

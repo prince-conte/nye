@@ -1917,6 +1917,10 @@ a.button {
   margin-top: 0;
 }
 
+.section-box--alt-background {
+  background: #fff;
+}
+
 .section-box__header > h2 {
   font-family: "Fira Sans Condensed", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3rem;
@@ -1949,6 +1953,32 @@ a.button {
             align-items: center;
     margin-bottom: 2.6rem;
   }
+}
+
+.section-box__next-link {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  display: block;
+  color: #01244e;
+  text-decoration: none;
+}
+
+.mod_no-touchevents .section-box__next-link:hover, .mod_no-touchevents .section-box__next-link.hover {
+  color: #8597af;
+}
+
+.section-box__next-link::after {
+  width: 0.5rem;
+  height: 0.9rem;
+  display: inline-block;
+  margin-left: .7rem;
+  -webkit-transform: translateY(-0.05rem);
+          transform: translateY(-0.05rem);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/arrowright.png);
+  content: '';
 }
 
 @media all and (min-width: 1025px) {
