@@ -14,7 +14,7 @@
   &__top-news-col {
 
     @include mq(sm) {
-      margin-bottom: -2rem;
+      margin-bottom: 2rem;
     }
 
     @include mq(lg) {

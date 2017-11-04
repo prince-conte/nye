@@ -8,6 +8,11 @@
   align-items: stretch;
   z-index: 99;
 
+  @include mq(sm) {
+    width: 100%;
+    background: #fff;
+  }
+
 
   &__logo {
     display: flex;

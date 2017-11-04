@@ -13,6 +13,14 @@
 
   &__main-grid-col {
 
+    @include mq(sm) {
+
+      &:not(:last-child) {
+
+        margin-bottom: 3.5rem;
+      }
+    }
+
     @include mq(lg) {
       @include grid-col();
       @include col-size(1/2)

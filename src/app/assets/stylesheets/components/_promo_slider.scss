@@ -1,18 +1,24 @@
 @charset "UTF-8";
 
 .promo-slider {
-  //background-color: $color-base;
 
-
-  &__item {
+  @include mq(sm) {
     position: relative;
-    min-height: 52rem;
+  }
+
+  &__item, &__mobile-image {
 
     background:  {
       position: 50% 50%;
       size: cover;
       repeat: no-repeat;
     };
+  }
+
+
+  &__item {
+    position: relative;
+    min-height: 52rem;
 
     @include mq(md) {
       min-height: 76.8rem;
@@ -25,13 +31,34 @@
     }
   }
 
+  &__mobile-image {
+    display: none;
+
+    @include mq(sm) {
+      @include size(100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
   &__content {
     @include size(100%, auto);
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 2rem 0 2.4rem;
     background: rgba($color-brand, .6);
+
+    @include mq(sm) {
+      position: relative;
+      z-index: 10;
+    }
+
+    @include mq(lg) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     article {
       color: #fff;
@@ -97,6 +124,14 @@
 
   &__col-1-5 {
     padding: 1rem;
+
+    @include mq(sm) {
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-light;
+      }
+
+    }
 
     @include mq(lg) {
       border-right: 1px solid transparent;

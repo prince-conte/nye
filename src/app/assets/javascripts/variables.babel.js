@@ -3,8 +3,7 @@
 // String:  Modernizr.mq(mq.sm.str);
 createMq([
     ['sm',  767],
-    ['md',  768],
     ['lg', 1025]
 ]);
 
-const TRANSITION_DURATION_BASE = 200;
+const TRANSITION_DURATION_BASE = 400;

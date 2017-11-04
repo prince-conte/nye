@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .section-box {
+  margin: 3.5rem 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -15,6 +16,7 @@
   }
 
   &--alt-background {
+    padding: 3.5rem 0;
     background: #fff;
 
     @include mq(lg) {
@@ -50,6 +52,10 @@
     display: block;
     color: $color-brand;
     text-decoration: none;
+
+    @include mq(sm) {
+      margin: 1rem 0;
+    }
 
     &::after {
       @include size(.5rem,.9rem);

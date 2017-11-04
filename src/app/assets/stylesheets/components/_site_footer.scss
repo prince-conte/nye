@@ -5,6 +5,7 @@
 
 
   &__main-grid {
+    padding: 3.5rem 0;
 
     @include mq(lg) {
       display: flex;
@@ -15,7 +16,7 @@
   &__contacts-col {
 
     @include mq(sm) {
-      margin-bottom: -2rem;
+      margin-bottom: 2rem;
     }
 
     @include mq(lg) {
@@ -26,6 +27,7 @@
 
   &__title {
     @include h2;
+    margin-bottom: 2rem;
     color: $color-light;
     text-transform: uppercase;
 
@@ -63,6 +65,10 @@
   // form
 
   &__feedback {
+
+    @include mq(sm) {
+      margin-top: 3.5rem;
+    }
 
     @include mq(lg) {
       flex: 1;

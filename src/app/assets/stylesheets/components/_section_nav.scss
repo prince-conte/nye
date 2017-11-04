@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
 .section-nav {
-  display: flex;
+
+  @include mq(sm) {
+    margin: 1rem 0;
+  }
+
+  @include mq(lg) {
+    display: flex;
+  }
 
   > li {
-    padding: 0 2.5rem;
+
+    @include mq(lg) {
+      padding: 0 2.5rem;
+    }
 
     &:not(:last-child) {
 

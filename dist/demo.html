@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Demo / Neo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta(name='viewport' content='width=device-width, initial-scale=1')-->
+    <script>var screenWidth = screen.width; var metaContentWidth; if (screen.width < 768) {metaContentWidth = 'device-width, initial-scale=1';} else {metaContentWidth = 1220;} document.write('<meta name="viewport" content="width=' + metaContentWidth + '">');</script>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
@@ -12,8 +13,8 @@
     <script src="js/modernizr.js"></script>
   </head>
   <body>
-    <header class="site-header"><a class="site-header__menu-button" href="#">
-        <div class="site-header__burger-box"><span></span><span></span><span></span></div></a><a class="site-header__logo" href="#"><img src="img/logo.svg" alt="logo"></a></header>
+    <header class="site-header js-site-header"><a class="site-header__menu-button" href="#">
+        <div class="site-header__burger-box"><span></span><span></span><span></span></div></a><a class="site-header__logo" href="index.html"><img src="img/logo.svg" alt="logo"></a></header>
     <main class="site-main">
       <div class="container"><br><br><br>
         <article>
@@ -394,7 +395,7 @@
               </dl>
             </div>
           </div>
-          <div class="site-footer__feedback form">
+          <form class="site-footer__feedback form">
             <h2 class="site-footer__title">FORMULARIO</h2>
             <div class="site-footer__input-grid">
               <div class="site-footer__input-block">
@@ -416,12 +417,12 @@
             <div class="site-footer__button-box">
               <button class="button">ENVIAR</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="site-footer__information">
         <div class="container">
-          <div class="site-footer__information-grid"><span>Accionistas e inversores</span><a href="#">Accionistas e inversores</a></div>
+          <div class="site-footer__information-grid"><span>Accionistas e inversores</span><a href="http://www.coalla.ru/" target="_blank">Developed by Coalla Agency</a></div>
         </div>
       </div>
     </footer>
