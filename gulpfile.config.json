@@ -1,0 +1,98 @@
+{
+  "paths": {
+    "src": {
+      "views": {
+        "build": "src/app/views/*.pug",
+        "watch": "src/app/views/**/*.pug"
+      },
+      "styles": {
+        "build": "src/app/assets/stylesheets/application.scss",
+        "watch": "src/app/assets/stylesheets/**/*.scss"
+      },
+      "modernizr": "src/app/assets/javascripts/vendors/modernizr.js",
+      "vendorScripts": {
+        "build": [
+          "src/app/assets/vendors/jquery/dist/jquery.js",
+          "src/app/assets/vendors/jquery-ui/jquery-ui.js",
+          "src/app/assets/vendors/jquery-ui/ui/i18n/datepicker-ru.js",
+          "src/app/assets/vendors/slick-carousel/slick/slick.js",
+          "src/app/assets/vendors/svg4everybody/dist/svg4everybody.js"
+        ],
+        "concat": "vendors.js"
+      },
+      "scripts": {
+        "build": [
+          "src/app/assets/javascripts/config.babel.js",
+          "src/app/assets/javascripts/utilities.babel.js",
+          "src/app/assets/javascripts/variables.babel.js",
+          "src/app/assets/javascripts/components/jquery_ui/autocomplete.babel.js",
+          "src/app/assets/javascripts/components/jquery_ui/datepicker.babel.js",
+          "src/app/assets/javascripts/components/jquery_ui/selectmenu.babel.js",
+          "src/app/assets/javascripts/components/icons.babel.js",
+          "src/app/assets/javascripts/components/wysiwyg.babel.js",
+          "src/app/assets/javascripts/components/promo-slider.js"
+        ],
+        "concat": "application.js",
+        "watch": "src/app/assets/javascripts/**/*.js"
+      },
+      "vendorFonts": {
+        "build": [
+          " "
+        ]
+      },
+      "fonts": "src/app/assets/fonts/**/*.{woff,woff2}",
+      "images": "src/app/assets/images/**/*.{gif,jpg,jpeg,png,svg}",
+      "files": "src/public/**/*"
+    },
+    "dist": {
+      "root": "dist/",
+      "css": "dist/css/",
+      "js": "dist/js/",
+      "fonts": "dist/fonts/",
+      "img": "dist/img/"
+    }
+  },
+  "options": {
+    "pug": {
+      "pretty": true
+    },
+    "sass": {
+      "outputStyle": "expanded"
+    },
+    "babel": {
+      "presets": ["env"]
+    },
+    "modernizr": {
+      "classPrefix": "mod_",
+      "options": [
+        "mq",
+        "setClasses"
+      ],
+      "feature-detects": [
+        "css/flexboxtweener",
+        "touchevents"
+      ]
+    },
+    "imagemin": {
+      "gifsicle": {
+        "interlaced": true
+      },
+      "jpegtran": {
+        "progressive": true
+      },
+      "optipng": {
+        "optimizationLevel": 5
+      },
+      "svgo": {
+        "plugins": [
+          {
+            "cleanupIDs": false
+          },
+          {
+            "removeUselessDefs": false
+          }
+        ]
+      }
+    }
+  }
+}

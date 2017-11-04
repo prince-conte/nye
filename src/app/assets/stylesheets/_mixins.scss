@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+// Media queries
+@mixin mq($mq-breakpoint) {
+    @if $enable-mq == true {
+        @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+            $mq-device: '';
+            @if $enable-mq-device == true {
+                $mq-device: '-device';
+            }
+
+            $mq-range: 'min';
+            @if $mq-breakpoint == nth(map-keys($mq-breakpoints), 1) {
+                $mq-range: 'max';
+            }
+
+            @media all and (#{$mq-range}#{$mq-device}-width: map-get($mq-breakpoints, $mq-breakpoint)) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin mq-custom($mq-range, $mq-breakpoint) {
+    $mq-device: '';
+    @if $enable-mq-device == true {
+        $mq-device: '-device';
+    }
+
+    @media all and (#{$mq-range}#{$mq-device}-width: $mq-breakpoint) {
+        @content;
+    }
+}
+
+// Indents
+@mixin indents-x($multiplier-right: 1, $multiplier-left: $multiplier-right, $exclude-first-last: true) {
+    $indent-right: 0;
+    $indent-left: 0;
+
+    @if $enable-mq == true {
+        @each $mq-indent in $mq-indents {
+            $mq: nth($mq-indent, 1);
+            $indent: nth($mq-indent, 2);
+
+            @include mq($mq) {
+                // Right
+                @if $multiplier-right == 1 {
+                    $indent-right: $indent;
+                } @else {
+                    $indent-right: $indent * $multiplier-right;
+                }
+
+                @if $exclude-first-last == true {
+                    &:not(:last-child) {
+                        margin-right: $indent-right;
+                    }
+                } @else {
+                    margin-right: $indent-right;
+                }
+
+                // Left
+                @if $multiplier-left == 1 {
+                    $indent-left: $indent;
+                } @else {
+                    $indent-left: $indent * $multiplier-left;
+                }
+
+                @if $exclude-first-last == true {
+                    &:not(:first-child) {
+                        margin-left: $indent-left;
+                    }
+                } @else {
+                    margin-left: $indent-left;
+                }
+            }
+        }
+    } @else {
+        // Right
+        @if $multiplier-right == 1 {
+            $indent-right: $indent;
+        } @else {
+            $indent-right: $indent * $multiplier-right;
+        }
+
+        @if $exclude-first-last == true {
+            &:not(:last-child) {
+                margin-right: $indent-right;
+            }
+        } @else {
+            margin-right: $indent-right;
+        }
+
+        // Left
+        @if $multiplier-left == 1 {
+            $indent-left: $indent;
+        } @else {
+            $indent-left: $indent * $multiplier-left;
+        }
+
+        @if $exclude-first-last == true {
+            &:not(:first-child) {
+                margin-left: $indent-left;
+            }
+        } @else {
+            margin-left: $indent-left;
+        }
+    }
+}
+
+@mixin indents-y($multiplier-top: 1, $multiplier-bottom: $multiplier-top, $exclude-first-last: true) {
+    $indent-top: 0;
+    $indent-bottom: 0;
+
+    @if $enable-mq == true {
+        @each $mq-indent in $mq-indents {
+            $mq: nth($mq-indent, 1);
+            $indent: nth($mq-indent, 2);
+
+            @include mq($mq) {
+                // Top
+                @if $multiplier-top == 1 {
+                    $indent-top: $indent;
+                } @else {
+                    $indent-top: $indent * $multiplier-top;
+                }
+
+                @if $exclude-first-last == true {
+                    &:not(:first-child) {
+                        margin-top: $indent-top;
+                    }
+                } @else {
+                    margin-top: $indent-top;
+                }
+
+                // Bottom
+                @if $multiplier-bottom == 1 {
+                    $indent-bottom: $indent;
+                } @else {
+                    $indent-bottom: $indent * $multiplier-bottom;
+                }
+
+                @if $exclude-first-last == true {
+                    &:not(:last-child) {
+                        margin-bottom: $indent-bottom;
+                    }
+                } @else {
+                    margin-bottom: $indent-bottom;
+                }
+            }
+        }
+    } @else {
+        // Top
+        @if $multiplier-top == 1 {
+            $indent-top: $indent;
+        } @else {
+            $indent-top: $indent * $multiplier-top;
+        }
+
+        @if $exclude-first-last == true {
+            &:not(:first-child) {
+                margin-top: $indent-top;
+            }
+        } @else {
+            margin-top: $indent-top;
+        }
+
+        // Bottom
+        @if $multiplier-bottom == 1 {
+            $indent-bottom: $indent;
+        } @else {
+            $indent-bottom: $indent * $multiplier-bottom;
+        }
+
+        @if $exclude-first-last == true {
+            &:not(:last-child) {
+                margin-bottom: $indent-bottom;
+            }
+        } @else {
+            margin-bottom: $indent-bottom;
+        }
+    }
+}
+
+// Container
+@mixin container {
+    width: 100%;
+    margin: {
+        right: auto;
+        left: auto;
+    };
+
+    @if $enable-mq == true {
+        @each $mq-container-width in $mq-container-widths {
+            $mq: nth($mq-container-width, 1);
+            $container-width: nth($mq-container-width, 2);
+
+            @include mq($mq) {
+                max-width: $container-width;
+            }
+        }
+
+        @each $mq-container-indent in $mq-container-indents {
+            $mq: nth($mq-container-indent, 1);
+            $container-indent: nth($mq-container-indent, 2);
+
+            @include mq($mq) {
+                padding: {
+                    right: $container-indent;
+                    left:  $container-indent;
+                };
+            }
+        }
+    } @else {
+        max-width: $container-width;
+
+        padding: {
+            right: $container-indent;
+            left: $container-indent;
+        };
+    }
+}
+
+// Grid
+@mixin grid($main-axis: x, $justify-content: flex-start, $align-items: flex-start, $multiplier: 1) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+
+    @if $main-axis == x {
+        flex-flow: row wrap;
+    }
+
+    @if $main-axis == y {
+        flex-flow: column nowrap;
+    }
+
+    @if $enable-mq == true {
+        @each $mq-grid-gutter in $mq-grid-gutters {
+            $mq: nth($mq-grid-gutter, 1);
+            $gutter: -#{nth($mq-grid-gutter, 2) / 2 * $multiplier};
+
+            @include mq($mq) {
+                margin: {
+                    right: $gutter;
+                    left:  $gutter;
+                };
+            }
+        }
+    } @else {
+        $gutter: -$grid-gutter / 2;
+
+        margin: {
+            right: $gutter;
+            left:  $gutter;
+        };
+    }
+}
+
+// Grid col
+@mixin grid-col($multiplier: 1) {
+    @if $enable-mq == true {
+        @each $mq-grid-gutter in $mq-grid-gutters {
+            $mq: nth($mq-grid-gutter, 1);
+            $gutter: nth($mq-grid-gutter, 2) / 2 * $multiplier;
+
+            @include mq($mq) {
+                padding: {
+                    right: $gutter;
+                    left:  $gutter;
+                };
+            }
+        }
+    } @else {
+        $gutter: $grid-gutter / 2;
+
+        padding: {
+            right: $gutter * $multiplier;
+            left:  $gutter * $multiplier;
+        };
+    }
+}
+
+// Col size
+@mixin col-size($size) {
+    width: $size * 100%;
+}
+
+// Ellipsis
+// https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_ellipsis.scss
+@mixin ellipsis($width: 100%, $display: inline-block) {
+    display: $display;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+// Font
+@mixin font($font-size, $line-height: 1) {
+    font-size: $font-size;
+    line-height: strip-units($line-height) / strip-units($font-size);
+}
+
+// Interact
+@mixin interact($properties-list, $values-list, $state: hover) {
+    $properties-length: length($properties-list);
+    $values-length: length($values-list);
+
+    @if $properties-length == $values-length {
+        .mod_no-touchevents & {
+            @if $enable-double-hover == true {
+                &:#{$state},
+                &.#{$state} {
+                    @for $i from 1 through $properties-length {
+                        #{nth($properties-list, $i)}: nth($values-list, $i);
+                    }
+                }
+            } @else {
+                &:#{$state} {
+                    @for $i from 1 through $properties-length {
+                        #{nth($properties-list, $i)}: nth($values-list, $i);
+                    }
+                }
+            }
+        }
+    } @else {
+        @error "The number of properties (#{$properties-list}) and values (#{$values-list}) are not equal."
+    }
+}
+
+// Size
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Text
+@mixin text-lg {
+    @include font(2rem, 2.5rem);
+}
+
+@mixin text-md {
+    @include font(1.5rem, 2rem);
+}
+
+@mixin text-sm {
+    @include font(1rem, 1.5rem);
+}
+
+// Headings
+@mixin heading {
+    font-family: $font-family-title;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@mixin h1($font-weight: $font-weight-title) {
+    @include heading;
+    @include font(6rem, 6rem);
+    font-weight: $font-weight;
+}
+
+@mixin h2($font-weight: $font-weight-title) {
+    @include heading;
+    @include font(5rem, 5rem);
+    font-weight: $font-weight;
+}
+
+@mixin h3($font-weight: $font-weight-title) {
+    @include heading;
+    @include font(4rem, 4rem);
+    font-weight: $font-weight;
+}
+
+@mixin h4($font-weight: $font-weight-title) {
+    @include heading;
+    @include font(3rem, 3rem);
+    font-weight: $font-weight;
+}
+
+@mixin h5($font-weight: $font-weight-title) {
+    @include heading;
+    @include text-lg;
+    font-weight: $font-weight;
+}
+
+@mixin h6($font-weight: $font-weight-title) {
+    @include heading;
+    @include text-md;
+    font-weight: $font-weight;
+}
+
+// Nested list
+// https://gabri.me/blog/sass-mixin-for-auto-numbering-with-css/
+@mixin nested-list($numbered-element, $sep, $counter: item, $nested-parent: false) {
+    $sel: ();
+
+    @if $nested-parent {
+        $sel: append($sel, unquote($nested-parent));
+    }
+
+    $sel: append($sel, unquote('&'), comma);
+
+    #{$sel}{
+        counter-reset: #{$counter};
+
+        > #{$numbered-element}{
+            &:before{
+                counter-increment: #{$counter};
+                content: if($nested-parent, counters(#{$counter}, "#{$sep}") "#{$sep} ", counter(#{$counter}) "#{$sep}");
+            }
+        }
+    }
+}

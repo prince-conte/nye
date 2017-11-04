@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.site-main {
+    @if $enable-sticky-footer == true {
+        .mod_no-flexboxtweener & {
+            flex: 1;
+        }
+
+        .mod_flexboxtweener & {
+            flex: 1 0 auto;
+        }
+    }
+}

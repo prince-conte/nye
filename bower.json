@@ -1,0 +1,27 @@
+{
+  "name": "neo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Vyacheslav Efremenko <brainsapiens@yandex.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/brainsapiens/neo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/app/assets/vendors/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "svg4everybody": "^2.1.8",
+    "normalize-css": "^7.0.0",
+    "jquery-ui": "^1.12.1"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

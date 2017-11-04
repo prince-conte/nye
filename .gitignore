@@ -1,0 +1,10 @@
+/.idea
+
+/node_modules
+
+/src/app/assets/vendors
+
+__MACOSX
+.DS_Store
+
+Thumbs.db

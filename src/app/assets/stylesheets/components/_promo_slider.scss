@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.promo-slider {
+  background-color: $color-base;
+
+
+  &__item {
+    position: relative;
+    min-height: 52rem;
+
+    background:  {
+      position: 50% 50%;
+      size: cover;
+      repeat: no-repeat;
+    };
+
+    @include mq(md) {
+      min-height: 76.8rem;
+    }
+
+    > img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+}

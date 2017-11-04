@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    @if $enable-sticky-footer == true {
+        &.mod_flexboxtweener {
+            height: 100%;
+        }
+    }
+}
+
+body {
+    @include text-md;
+    min-height: 100vh;
+    background: #fff;
+    color: $color-base;
+    font: {
+        family: $font-family-text;
+        weight: $font-weight-text;
+    }
+
+    @if $enable-sticky-footer == true {
+        display: flex;
+        flex-direction: column;
+
+        .mod_flexboxtweener & {
+            height: 100%;
+        }
+    }
+}
+
+// Links
+a {
+    color: $color-link;
+    transition: all $transition-duration-base;
+
+    &.is-current {
+        cursor: default;
+
+        &:visited,
+        &:hover,
+        &:active {
+            color: inherit;
+        }
+    }
+}
+
+// Forms
+button,
+input,
+select,
+textarea {
+    appearance: none;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+select {
+    border-radius: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+// Headings
+h1 {
+    @include h1;
+    margin: 0;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+h6 {
+    @include h6;
+}
+
+// Hr
+hr {
+    border: none;
+}
+
+// Iframes
+iframe {
+    border: none;
+}
+
+// Images
+img {
+    max-width: 100%;
+
+    &[width],
+    &[height] {
+        max-width: none;
+    }
+}
+
+// Figure
+figure {
+    margin: 0;
+}
+
+// Lists
+ol,
+ul {
+    list-style: none;
+}
+
+// Small
+small {
+    @include text-sm;
+}
+
+// SVG
+svg {
+    vertical-align: top;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Disabled
+:disabled {
+    cursor: not-allowed;
+}
+
+// jQuery UI
+.ui-helper-hidden-accessible {
+    display: none;
+}
