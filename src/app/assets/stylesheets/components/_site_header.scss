@@ -23,9 +23,11 @@
   }
 
   &__menu-button {
+    @include interact(background,$color-lighter);
     @include size(7.5rem);
     position: relative;
     background: $color-brand;
+    transition: background $transition-duration-base;
   }
 
   &__burger-box {

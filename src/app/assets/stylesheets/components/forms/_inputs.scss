@@ -5,8 +5,16 @@
         > input {
             display: block;
             width: 100%;
-            padding: .5rem .75rem;
-            border: 1px solid $color-lightest;
+            padding: 0 0 .9rem;
+            border-bottom: 1px solid $color-lighter;
+
+            &::placeholder {
+                color: $color-lighter;
+            }
+
+            &:focus {
+                border-bottom: 1px solid $color-light;
+            }
 
             &:disabled {
                 opacity: .2;

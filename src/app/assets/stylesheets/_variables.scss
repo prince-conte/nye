@@ -46,7 +46,7 @@ $color-base:     #4e78aa;
 $color-bg:     #dfebf7;
 $color-base-title:     #004699;
 $color-light:    #8597af;
-$color-lighter:  #b5c4d5;
+$color-lighter:  #345072;
 $color-lightest: #cedcea;
 
 $color-brand:    #01244e;
@@ -70,4 +70,4 @@ $radio-size:    2rem;
 $color-link: rgba(blue, .8);
 
 // Transitions
-$transition-duration-base: .2s;
+$transition-duration-base: .4s ease-out;

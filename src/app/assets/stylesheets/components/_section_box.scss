@@ -2,6 +2,10 @@
 
 .section-box {
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include mq(lg) {
     margin: 7.5rem 0;
   }
@@ -24,10 +28,6 @@
       @include h2;
       color: $color-base-title;
       text-transform: uppercase;
-
-      @include mq(sm) {
-        margin-bottom: 2rem;
-      }
     }
 
     @include mq(lg) {

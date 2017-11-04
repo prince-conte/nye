@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
 @if $enable-buttons == true {
+
     .button {
         display: inline-block;
         padding: .5rem 1.5rem;
         background: $color-light;
-        color: #fff;
+        color: $color-brand;
         text-align: center;
 
         @at-root a#{&} {

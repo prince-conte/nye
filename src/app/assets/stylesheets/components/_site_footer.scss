@@ -1,9 +1,154 @@
 @charset "UTF-8";
 
 .site-footer {
+  background: $color-brand;
 
-  @include mq(lg) {
-    padding-top: 7.5rem;
+
+  &__main-grid {
+
+    @include mq(lg) {
+      display: flex;
+      padding: 7.5rem 0;
+    }
   }
+
+  &__contacts-col {
+
+    @include mq(sm) {
+      margin-bottom: -2rem;
+    }
+
+    @include mq(lg) {
+      width: 40rem;
+      padding-right: 9rem;
+    }
+  }
+
+  &__title {
+    @include h2;
+    color: $color-light;
+    text-transform: uppercase;
+
+    @include mq(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__contacts {
+
+    > dl {
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      > dt {
+        @include font(1.9rem,2.4rem);
+        color: #fff;
+      }
+
+      > dd {
+
+        > a {
+          @include text-md;
+          @include interact(color,$color-light);
+          color: $color-lighter;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  // form
+
+  &__feedback {
+
+    @include mq(lg) {
+      flex: 1;
+    }
+  }
+
+  &__input-grid {
+
+    @include mq(sm) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq(lg) {
+
+      @include grid();
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__input-block {
+
+    @include mq(sm) {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include mq(lg) {
+
+      @include grid-col();
+      @include col-size(1/2);
+    }
+  }
+
+  &__textarea-block {
+
+    textarea {
+      height: 5rem;
+      resize: none;
+    }
+  }
+
+  &__button-box {
+    margin-top: 3rem;
+
+    @include mq(lg) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__information {
+    padding: 2rem;
+    border-top: 1px solid rgba($color-lighter, .3);
+  }
+
+  &__information-grid {
+
+    @include mq(sm) {
+      text-align: center;
+    }
+
+    @include mq(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    > a, > span {
+      display: block;
+      color: $color-lighter;
+
+      @include mq(sm) {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    > a {
+      @include interact(color,$color-lightest);
+      text-decoration: none;
+    }
+  }
+
+
+
+
 
 }

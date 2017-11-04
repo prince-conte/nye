@@ -580,8 +580,8 @@ body {
 
 a {
   color: rgba(0, 0, 255, 0.8);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 a.is-current {
@@ -804,7 +804,7 @@ table {
   display: block;
   border-top: .5rem solid transparent;
   border-bottom: .5rem solid transparent;
-  border-right: 0.75rem solid #b5c4d5;
+  border-right: 0.75rem solid #345072;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
@@ -831,7 +831,7 @@ table {
   display: block;
   border-top: .5rem solid transparent;
   border-bottom: .5rem solid transparent;
-  border-left: 0.75rem solid #b5c4d5;
+  border-left: 0.75rem solid #345072;
 }
 
 .ui-datepicker .ui-datepicker-calendar {
@@ -884,7 +884,7 @@ table {
           transform: translateY(-50%);
   display: block;
   pointer-events: none;
-  border-top: 0.4rem solid #b5c4d5;
+  border-top: 0.4rem solid #345072;
   border-right: .4rem solid transparent;
   border-left: .4rem solid transparent;
 }
@@ -899,7 +899,7 @@ table {
 }
 
 .ui-selectmenu-button .ui-selectmenu-text.ui-state-placeholder {
-  color: #b5c4d5;
+  color: #345072;
 }
 
 .ui-selectmenu-menu {
@@ -931,11 +931,19 @@ table {
   background: #eee;
 }
 
+.form {
+  display: block;
+}
+
+.form input, .form textarea, .form button {
+  outline: none !important;
+}
+
 .button {
   display: inline-block;
   padding: .5rem 1.5rem;
   background: #8597af;
-  color: #fff;
+  color: #01244e;
   text-align: center;
 }
 
@@ -991,8 +999,8 @@ a.button {
           transform: translate(-50%, -50%);
   background: #4e78aa;
   content: "";
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .checkbox > input:checked + span::after {
@@ -1011,8 +1019,28 @@ a.button {
 .input > input {
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
-  border: 1px solid #cedcea;
+  padding: 0 0 .9rem;
+  border-bottom: 1px solid #345072;
+}
+
+.input > input::-webkit-input-placeholder {
+  color: #345072;
+}
+
+.input > input:-ms-input-placeholder {
+  color: #345072;
+}
+
+.input > input::-ms-input-placeholder {
+  color: #345072;
+}
+
+.input > input::placeholder {
+  color: #345072;
+}
+
+.input > input:focus {
+  border-bottom: 1px solid #8597af;
 }
 
 .input > input:disabled {
@@ -1088,8 +1116,8 @@ a.button {
   background: #4e78aa;
   border-radius: 50%;
   content: "";
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .radio > input:checked + span::after {
@@ -1126,7 +1154,7 @@ a.button {
           transform: translateY(-50%);
   display: block;
   pointer-events: none;
-  border-top: 0.4rem solid #b5c4d5;
+  border-top: 0.4rem solid #345072;
   border-right: .4rem solid transparent;
   border-left: .4rem solid transparent;
 }
@@ -1142,8 +1170,28 @@ a.button {
 .textarea > textarea {
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
-  border: 1px solid #cedcea;
+  padding: 0 0 .9rem;
+  border-bottom: 1px solid #345072;
+}
+
+.textarea > textarea::-webkit-input-placeholder {
+  color: #345072;
+}
+
+.textarea > textarea:-ms-input-placeholder {
+  color: #345072;
+}
+
+.textarea > textarea::-ms-input-placeholder {
+  color: #345072;
+}
+
+.textarea > textarea::placeholder {
+  color: #345072;
+}
+
+.textarea > textarea:focus {
+  border-bottom: 1px solid #8597af;
 }
 
 .textarea > textarea:disabled {
@@ -1189,8 +1237,8 @@ a.button {
 .icon {
   fill: #fff;
   fill-rule: evenodd;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill 0.4s ease-out;
+  transition: fill 0.4s ease-out;
 }
 
 .icon--20 {
@@ -1419,7 +1467,7 @@ a.button {
 
 .wysiwyg > figure > figcaption {
   margin-top: 1rem;
-  color: #b5c4d5;
+  color: #345072;
 }
 
 .wysiwyg > img {
@@ -1631,7 +1679,7 @@ a.button {
 }
 
 .wysiwyg__table > table caption {
-  color: #b5c4d5;
+  color: #345072;
   text-align: right;
 }
 
@@ -1724,6 +1772,12 @@ a.button {
   height: 7.5rem;
   position: relative;
   background: #01244e;
+  -webkit-transition: background 0.4s ease-out;
+  transition: background 0.4s ease-out;
+}
+
+.mod_no-touchevents .site-header__menu-button:hover, .mod_no-touchevents .site-header__menu-button.hover {
+  background: #345072;
 }
 
 .site-header__burger-box {
@@ -1757,10 +1811,202 @@ a.button {
           flex: 1 0 auto;
 }
 
+.site-footer {
+  background: #01244e;
+}
+
 @media all and (min-width: 1025px) {
-  .site-footer {
-    padding-top: 7.5rem;
+  .site-footer__main-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 7.5rem 0;
   }
+}
+
+@media all and (max-width: 767px) {
+  .site-footer__contacts-col {
+    margin-bottom: -2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__contacts-col {
+    width: 40rem;
+    padding-right: 9rem;
+  }
+}
+
+.site-footer__title {
+  font-family: "Fira Sans Condensed", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1.03333;
+  font-weight: 300;
+  color: #8597af;
+  text-transform: uppercase;
+}
+
+.site-footer__title a {
+  text-decoration: none;
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__title {
+    margin-bottom: 3rem;
+  }
+}
+
+.site-footer__contacts > dl:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.site-footer__contacts > dl > dt {
+  font-size: 1.9rem;
+  line-height: 1.26316;
+  color: #fff;
+}
+
+.site-footer__contacts > dl > dd > a {
+  font-size: 1.3rem;
+  line-height: 1.53846;
+  color: #345072;
+  text-decoration: none;
+}
+
+.mod_no-touchevents .site-footer__contacts > dl > dd > a:hover, .mod_no-touchevents .site-footer__contacts > dl > dd > a.hover {
+  color: #8597af;
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__feedback {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .site-footer__input-grid {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__input-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 767px) {
+  .site-footer__input-grid {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (min-width: 1025px) {
+  .site-footer__input-grid {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .site-footer__input-block:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__input-block {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 767px) {
+  .site-footer__input-block {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media all and (min-width: 1025px) and (min-width: 1025px) {
+  .site-footer__input-block {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.site-footer__textarea-block textarea {
+  height: 5rem;
+  resize: none;
+}
+
+.site-footer__button-box {
+  margin-top: 3rem;
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__button-box {
+    margin-bottom: 4rem;
+  }
+}
+
+.site-footer__information {
+  padding: 2rem;
+  border-top: 1px solid rgba(52, 80, 114, 0.3);
+}
+
+@media all and (max-width: 767px) {
+  .site-footer__information-grid {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .site-footer__information-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.site-footer__information-grid > a, .site-footer__information-grid > span {
+  display: block;
+  color: #345072;
+}
+
+@media all and (max-width: 767px) {
+  .site-footer__information-grid > a:not(:last-child), .site-footer__information-grid > span:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.site-footer__information-grid > a {
+  text-decoration: none;
+}
+
+.mod_no-touchevents .site-footer__information-grid > a:hover, .mod_no-touchevents .site-footer__information-grid > a.hover {
+  color: #cedcea;
 }
 
 .promo-slider__item {
@@ -1918,6 +2164,10 @@ a.button {
   fill: #fff;
 }
 
+.section-box:last-child {
+  margin-bottom: 0;
+}
+
 @media all and (min-width: 1025px) {
   .section-box {
     margin: 7.5rem 0;
@@ -1949,12 +2199,6 @@ a.button {
 
 .section-box__header > h2 a {
   text-decoration: none;
-}
-
-@media all and (max-width: 767px) {
-  .section-box__header > h2 {
-    margin-bottom: 2rem;
-  }
 }
 
 @media all and (min-width: 1025px) {
@@ -2204,8 +2448,8 @@ a.button {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .projects__description, .projects__position {
@@ -2305,8 +2549,8 @@ a.button {
 
 .articles__col {
   padding: 0 1rem;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
+  -webkit-transition: background 0.4s ease-out;
+  transition: background 0.4s ease-out;
 }
 
 @media all and (min-width: 1025px) {
@@ -2374,13 +2618,13 @@ a.button {
 }
 
 .articles__notice > footer > a > svg, .articles__notice > footer span > svg {
-  fill: #b5c4d5;
+  fill: #345072;
 }
 
 .mod_no-touchevents .articles__notice > footer > a[data-content]:hover > svg,
 .mod_no-touchevents .articles__notice > footer > a[data-content].hover > svg, .mod_no-touchevents .articles__notice > footer span[data-content]:hover > svg,
 .mod_no-touchevents .articles__notice > footer span[data-content].hover > svg {
-  fill: #b5c4d5;
+  fill: #345072;
 }
 
 .articles__notice > footer > a[data-content]::after, .articles__notice > footer span[data-content]::after {
@@ -2391,7 +2635,7 @@ a.button {
   right: -1rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  color: #b5c4d5;
+  color: #345072;
   white-space: nowrap;
   content: attr(data-content);
 }
@@ -2443,7 +2687,7 @@ a.button {
 @media all and (min-width: 1025px) {
   .news__top-news-col {
     width: 40rem;
-    padding-right: 2rem;
+    padding-right: 5rem;
   }
 }
 
