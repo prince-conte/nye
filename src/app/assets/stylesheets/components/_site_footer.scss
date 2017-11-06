@@ -2,6 +2,7 @@
 
 .site-footer {
   background: $color-brand;
+  overflow: hidden;
 
 
   &__main-grid {
@@ -120,8 +121,18 @@
   }
 
   &__information {
+    position: relative;
     padding: 2rem;
-    border-top: 1px solid rgba($color-lighter, .3);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -999rem;
+      right: -999rem;
+      height: 1px;
+      background: rgba($color-lighter, .3);
+      content: '';
+    }
   }
 
   &__information-grid {

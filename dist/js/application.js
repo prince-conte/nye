@@ -2,7 +2,7 @@
 
 var enable = {
     mq: true,
-    mqDevice: true,
+    mqDevice: false,
 
     doubleHover: true,
 
@@ -82,7 +82,7 @@ if (enable.doubleHover) {
 // Media queries (for example: xs, sm, md, lg, xl)
 // Integer: mq.sm.int
 // String:  Modernizr.mq(mq.sm.str);
-createMq([['sm', 767], ['lg', 1025]]);
+createMq([['sm', 767], ['lg', 768]]);
 
 var TRANSITION_DURATION_BASE = 400;
 var siteGutter = 20;
@@ -296,7 +296,7 @@ $(function () {
 
             console.log(headerHeight);
 
-            $('.js-promo-slider').css('margin-top', headerHeight);
+            $('.js-promo-slider').css('margin-top', 'auto');
         }
     }
 

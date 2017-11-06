@@ -5,8 +5,18 @@
   @include mq(sm) {
     position: relative;
   }
+  @include mq(lg) {
+    min-width: $container-width;
+  }
 
-  &__item, &__mobile-image {
+  &__desktop-image, &__mobile-image {
+
+    @include size(100%);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
     background:  {
       position: 50% 50%;
@@ -18,7 +28,10 @@
 
   &__item {
     position: relative;
-    min-height: 52rem;
+
+    @include mq(sm) {
+      height: auto !important;
+    }
 
     @include mq(md) {
       min-height: 76.8rem;
@@ -31,16 +44,17 @@
     }
   }
 
+  &__desktop-image {
+
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
   &__mobile-image {
-    display: none;
 
     @include mq(sm) {
-      @include size(100%);
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
     }
   }
 
@@ -48,10 +62,10 @@
     @include size(100%, auto);
     padding: 2rem 0 2.4rem;
     background: rgba($color-brand, .6);
+    z-index: 10;
 
     @include mq(sm) {
       position: relative;
-      z-index: 10;
     }
 
     @include mq(lg) {

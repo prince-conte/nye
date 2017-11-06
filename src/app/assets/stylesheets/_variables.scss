@@ -5,7 +5,7 @@
 // Responsive
 $mq-breakpoints: ( // for example: xs, sm, md, lg, xl
     'sm': 767px,
-    'lg': 1025px
+    'lg': 768px
 );
 
 $mq-indents: (
@@ -31,7 +31,7 @@ $mq-grid-gutters: (
 // Not responsive
 $indent: 2rem;
 
-$container-width:  1440px;
+$container-width:  1220px;
 $container-indent: $indent;
 
 $grid-gutter: $indent;

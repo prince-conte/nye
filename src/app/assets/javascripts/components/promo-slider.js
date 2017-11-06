@@ -16,7 +16,7 @@ $( function() {
 
             console.log(headerHeight);
 
-            $('.js-promo-slider').css('margin-top' , headerHeight);
+            $('.js-promo-slider').css('margin-top' , 'auto');
 
         }
     }

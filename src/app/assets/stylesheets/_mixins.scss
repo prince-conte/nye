@@ -196,6 +196,7 @@
 
             @include mq($mq) {
                 max-width: $container-width;
+                min-width: $container-width;
             }
         }
 

@@ -16,6 +16,11 @@ html {
             height: 100%;
         }
     }
+
+    @include mq(lg) {
+        min-width: $container-width;
+    }
+
 }
 
 body {
