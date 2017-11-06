@@ -2,7 +2,7 @@
 
 var enable = {
     mq: true,
-    mqDevice: false,
+    mqDevice: true,
 
     doubleHover: true,
 
@@ -296,7 +296,7 @@ $(function () {
 
             console.log(headerHeight);
 
-            $('.js-promo-slider').css('margin-top', 'auto');
+            $('.js-promo-slider').css('margin-top', headerHeight);
         }
     }
 

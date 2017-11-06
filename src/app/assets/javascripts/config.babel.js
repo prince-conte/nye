@@ -1,6 +1,6 @@
 const enable = {
     mq: true,
-    mqDevice: false,
+    mqDevice: true,
 
 
     doubleHover: true,
