@@ -24,6 +24,7 @@ body {
     background: #fff;
     color: $color-base;
     background: $color-bg;
+    transition: opacity $transition-duration-base;
     font: {
         family: $font-family-text;
         weight: $font-weight-text;
@@ -37,6 +38,15 @@ body {
             height: 100%;
         }
     }
+
+    @include mq(lg) {
+        opacity: 0;
+    }
+
+    &.fadeIn {
+        opacity: 1;
+    }
+
 }
 
 // Links

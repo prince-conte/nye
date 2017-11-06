@@ -25,6 +25,9 @@ $( function() {
     $('.js-promo-slider').slick({
         infinite: true,
         cssEase: 'ease',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
         speed: 660,
         slidesToShow: 1,
         easing: 'linear',
@@ -51,7 +54,7 @@ $( function() {
             sliderInit();
         })
 
-        // .smartresize(function() {
-        //     sliderInit();
-        // });
+        .smartresize(function() {
+            sliderInit();
+        });
 });
