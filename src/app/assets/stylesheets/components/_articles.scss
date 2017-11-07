@@ -80,11 +80,11 @@
         display: block;
 
         > svg {
-          fill: $color-lighter;
+          fill: #b3c2d4;
         }
 
         &[data-content] {
-          @include interact(fill, $color-lighter, 'hover > svg');
+          @include interact(fill, #b3c2d4, 'hover > svg');
 
           &::after {
             @include font(1.3rem,2.8rem);
@@ -92,7 +92,7 @@
             top: 0;
             right: -1rem;
             transform: translateX(100%);
-            color: $color-lighter;
+            color: #b3c2d4;
             white-space: nowrap;
             content: attr(data-content);
           }

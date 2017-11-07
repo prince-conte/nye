@@ -2563,6 +2563,12 @@ a.button {
   color: #004699;
 }
 
+.projects a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 @media all and (min-device-width: 768px) {
   .projects__grid {
     display: -webkit-box;
@@ -2688,6 +2694,15 @@ a.button {
   width: 100%;
   height: auto;
   vertical-align: top;
+}
+
+.projects__image-box > a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
 }
 
 .projects__image {
@@ -2879,13 +2894,13 @@ a.button {
 }
 
 .articles__notice > footer > a > svg, .articles__notice > footer span > svg {
-  fill: #345072;
+  fill: #b3c2d4;
 }
 
 .mod_no-touchevents .articles__notice > footer > a[data-content]:hover > svg,
 .mod_no-touchevents .articles__notice > footer > a[data-content].hover > svg, .mod_no-touchevents .articles__notice > footer span[data-content]:hover > svg,
 .mod_no-touchevents .articles__notice > footer span[data-content].hover > svg {
-  fill: #345072;
+  fill: #b3c2d4;
 }
 
 .articles__notice > footer > a[data-content]::after, .articles__notice > footer span[data-content]::after {
@@ -2896,7 +2911,7 @@ a.button {
   right: -1rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  color: #345072;
+  color: #b3c2d4;
   white-space: nowrap;
   content: attr(data-content);
 }
