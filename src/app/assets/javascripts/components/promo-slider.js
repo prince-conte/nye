@@ -14,7 +14,7 @@ $( function() {
 
         } else if (Modernizr.mq(mq.sm.str)) {
 
-            console.log(headerHeight);
+            $('.js-promo-slider-item').css('height' , promoHeight - headerHeight);
 
             $('.js-promo-slider').css('margin-top' , headerHeight);
 
@@ -25,7 +25,7 @@ $( function() {
     $('.js-promo-slider').slick({
         infinite: true,
         cssEase: 'ease',
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         pauseOnHover: true,
         speed: 660,

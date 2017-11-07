@@ -26,6 +26,10 @@
 
   &__header {
 
+    @include mq(sm) {
+      margin-bottom: 3.5rem;
+    }
+
     > h2 {
       @include h2;
       color: $color-base-title;

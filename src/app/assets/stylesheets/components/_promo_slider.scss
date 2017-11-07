@@ -29,10 +29,6 @@
   &__item {
     position: relative;
 
-    @include mq(sm) {
-      height: auto !important;
-    }
-
     @include mq(md) {
       min-height: 76.8rem;
     }
@@ -60,24 +56,26 @@
 
   &__content {
     @include size(100%, auto);
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding: 2rem 0 2.4rem;
     background: rgba($color-brand, .6);
     z-index: 10;
 
-    @include mq(sm) {
-      position: relative;
-    }
-
     @include mq(lg) {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+
     }
 
     article {
       color: #fff;
 
       > header {
+
+        @include mq(sm) {
+          text-align: center;
+        }
+
         > h1 {
           @include font(3.4rem,3rem);
           text-transform: uppercase;
@@ -95,6 +93,10 @@
         @include text-sm;
         font-family: $font-family-alt;
         color: rgba(#fff,.5);
+
+        @include mq(sm) {
+          text-align: center;
+        }
       }
     }
   }
@@ -125,14 +127,15 @@
 }
 
 .promo-information {
-
-
   margin-top: 1.2rem;
+
+  @include mq(sm) {
+    display: none;
+  }
 
   &__grid {
     @include mq(lg) {
       display: flex;
-      border: 1px solid #fff;
     }
   }
 
@@ -148,12 +151,14 @@
     }
 
     @include mq(lg) {
-      border-right: 1px solid transparent;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
       border-left: 1px solid transparent;
       width: 20%;
 
-      &:not(:last-child) {
-        border-right: 1px solid #fff;
+      &:first-child{
+        border-left: 1px solid #fff;
       }
     }
   }

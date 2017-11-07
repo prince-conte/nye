@@ -14,7 +14,7 @@
   &__top-news-col {
 
     @include mq(sm) {
-      margin-bottom: 2rem;
+      margin-bottom: 3.5rem;
     }
 
     @include mq(lg) {
@@ -44,8 +44,6 @@
 
   &__all-news-grid {
 
-    @include grid(x, flex-start,  stretch, 1);
-
     @include mq(lg) {
 
       @include grid(x, flex-start,  stretch, 2);
@@ -57,9 +55,10 @@
 
 
     @include mq(sm) {
-      @include grid-col(1);
-      @include col-size(1/2);
-      margin-bottom: 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
     }
 
     @include mq(lg) {
