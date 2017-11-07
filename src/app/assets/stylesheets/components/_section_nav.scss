@@ -23,8 +23,7 @@
       }
 
       @include mq(lg) {
-        padding-right: 1.9rem;
-        border-right: .1rem solid $color-light;
+        border-right: .1rem solid #b3c2d4;
       }
     }
 
@@ -32,7 +31,7 @@
       @include font(1.2rem,1.5rem);
       @include interact(color,$color-light);
       display: block;
-      color: $color-brand;
+      color: #004699;
       text-decoration: none;
     }
 

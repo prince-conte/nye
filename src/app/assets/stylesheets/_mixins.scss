@@ -346,7 +346,7 @@
 }
 
 @mixin text-sm {
-    @include font(1rem, 1.5rem);
+    @include font(1.3rem, 2rem);
 }
 
 // Headings

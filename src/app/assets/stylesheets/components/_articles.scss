@@ -88,8 +88,9 @@
 
           &::after {
             @include font(1.3rem,2.8rem);
+            font-family: $font-family-alt;
             position: absolute;
-            top: 0;
+            top: -.3rem;
             right: -1rem;
             transform: translateX(100%);
             color: #b3c2d4;

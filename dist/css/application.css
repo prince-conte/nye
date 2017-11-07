@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,700|Open+Sans:300,400");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100,300,300i,400,400i,500,500i,600,700|Open+Sans:300,400");
 html {
   line-height: 1.15;
   /* 1 */
@@ -730,8 +730,8 @@ ul {
 }
 
 small {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.3rem;
+  line-height: 1.53846;
 }
 
 svg {
@@ -958,11 +958,19 @@ table {
 }
 
 .button {
+  font-size: 1.9rem;
+  line-height: 1;
   display: inline-block;
-  padding: .5rem 1.5rem;
+  padding: 1.1rem 1.5rem;
   background: #8597af;
   color: #01244e;
   text-align: center;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.mod_no-touchevents .button:hover, .mod_no-touchevents .button.hover {
+  background: #fff;
 }
 
 a.button {
@@ -2198,8 +2206,8 @@ a.button {
 }
 
 .promo-slider__content article > p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.3rem;
+  line-height: 1.53846;
   font-family: "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -2317,7 +2325,7 @@ a.button {
   font-size: 2rem;
   line-height: 1.05;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .promo-information__item-icon {
@@ -2404,7 +2412,7 @@ a.button {
       -ms-flex-align: start;
           align-items: flex-start;
   display: block;
-  color: #01244e;
+  color: #004699;
   text-decoration: none;
 }
 
@@ -2555,8 +2563,8 @@ a.button {
 }
 
 .about__main-grid-col > p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.3rem;
+  line-height: 1.53846;
   font-family: "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -2749,6 +2757,10 @@ a.button {
   padding-left: 1rem;
 }
 
+.projects__information-col > i {
+  font-weight: 100;
+}
+
 .projects__information-col > i, .projects__information-col > span {
   display: block;
   white-space: nowrap;
@@ -2794,8 +2806,7 @@ a.button {
 
 @media all and (min-device-width: 768px) {
   .section-nav > li:not(:last-child) {
-    padding-right: 1.9rem;
-    border-right: 0.1rem solid #8597af;
+    border-right: .1rem solid #b3c2d4;
   }
 }
 
@@ -2803,7 +2814,7 @@ a.button {
   font-size: 1.2rem;
   line-height: 1.25;
   display: block;
-  color: #01244e;
+  color: #004699;
   text-decoration: none;
 }
 
@@ -2914,8 +2925,9 @@ a.button {
 .articles__notice > footer > a[data-content]::after, .articles__notice > footer span[data-content]::after {
   font-size: 1.3rem;
   line-height: 2.15385;
+  font-family: "Open Sans", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   position: absolute;
-  top: 0;
+  top: -.3rem;
   right: -1rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -3052,7 +3064,7 @@ a.button {
 }
 
 .news .article > a > header {
-  margin-bottom: .7rem;
+  margin-bottom: .4rem;
 }
 
 .news .article > a > header > h4 {
