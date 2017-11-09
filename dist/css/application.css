@@ -2284,6 +2284,12 @@ a.button {
   }
 }
 
+@media all and (max-device-width: 767px) {
+  .promo-information--section {
+    display: block;
+  }
+}
+
 @media all and (min-device-width: 768px) {
   .promo-information--section {
     margin: 4rem 0;

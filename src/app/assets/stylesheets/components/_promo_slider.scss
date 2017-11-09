@@ -124,8 +124,6 @@
       }
     }
   }
-
-
 }
 
 .promo-information {
@@ -136,6 +134,10 @@
   }
 
   &--section {
+
+    @include mq(sm) {
+      display: block;
+    }
 
     @include mq(lg) {
       margin: 4rem 0;
