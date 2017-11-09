@@ -34,7 +34,9 @@
           "src/app/assets/javascripts/components/wysiwyg.babel.js",
           "src/app/assets/javascripts/components/body-fade-in.js",
           "src/app/assets/javascripts/components/site-navigate.js",
-          "src/app/assets/javascripts/components/promo-slider.js"
+          "src/app/assets/javascripts/components/project-photo-slider.js",
+          "src/app/assets/javascripts/components/promo-slider.js",
+          "src/app/assets/javascripts/components/project_map.js"
         ],
         "concat": "application.js",
         "watch": "src/app/assets/javascripts/**/*.js"

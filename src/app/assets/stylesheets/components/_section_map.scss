@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.section-map {
+  min-height: 25rem;
+
+  @include mq(lg) {
+    min-height: 50rem;
+  }
+
+}

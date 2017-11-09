@@ -13,3 +13,7 @@
 .text-lead {
     @include text-lg;
 }
+
+.text-align-center {
+    text-align: center;
+}

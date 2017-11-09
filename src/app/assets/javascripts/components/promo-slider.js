@@ -48,7 +48,6 @@ $( function() {
     });
 
 
-    sliderInit();
     $(window)
         .on('load', function() {
             sliderInit();

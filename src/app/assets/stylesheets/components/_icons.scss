@@ -14,6 +14,9 @@
             @include size(2.2rem);
         }
 
+        &--24 {
+            @include size(2.4rem);
+        }
         &--60 {
             @include size(6rem);
         }

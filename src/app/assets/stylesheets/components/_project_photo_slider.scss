@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.project-photo-slider {
+  position: relative;
+
+
+  &__slider-body {
+
+  }
+
+  &__item {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+
+  &__nav-box {
+    @include interact(background, rgba($color-bg, .75));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba($color-bg, .85);
+    cursor: default;
+    transition: background $transition-duration-base;
+
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    > .slick-arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  // slick overrides
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @include mq(lg) {
+      position: absolute;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+    > li {
+      @include size(.7rem);
+      border-radius: 50%;
+      background: rgba($color-brand,.1);
+
+      &:not(:last-child) {
+        margin-right: 2.2rem;
+      }
+
+      &.slick-active {
+        background: $color-brand;
+      }
+    }
+  }
+}

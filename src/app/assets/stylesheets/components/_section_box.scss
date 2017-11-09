@@ -13,6 +13,14 @@
 
   &--promo {
     margin-top: 0;
+
+    + .promo-information--section {
+      margin-top: 0;
+
+      @include mq(lg) {
+        margin-top: -3.5rem;
+      }
+    }
   }
 
   &--alt-background {
@@ -30,18 +38,34 @@
       margin-bottom: 3.5rem;
     }
 
-    > h2 {
-      @include h2;
-      color: $color-base-title;
-      text-transform: uppercase;
-    }
-
     @include mq(lg) {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2.6rem;
     }
+
+    &--center {
+
+      @include mq(lg) {
+        justify-content: center;
+      }
+    }
+
+    > h2, h3 {
+      color: $color-base-title;
+    }
+
+    > h2 {
+      @include h2;
+      text-transform: uppercase;
+    }
+
+    > h3 {
+      @include text-lg;
+    }
+
+
   }
 
   &__nav-box {
@@ -81,6 +105,17 @@
       }
     }
   }
+
+
+  &__description {
+
+    @include mq(lg) {
+      margin: 0 30rem;
+    }
+
+  }
+
+
 }
 
 .section-next-menu {

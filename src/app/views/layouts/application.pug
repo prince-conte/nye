@@ -3,6 +3,8 @@ doctype html
 html.mod_no-js(lang='es')
     include _head
 
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', async='', defer='')
+
     body.js-page-body
         include components/_site_header
 
@@ -11,4 +13,8 @@ html.mod_no-js(lang='es')
 
         include components/_site_footer
 
+
+
         include _scripts
+
+

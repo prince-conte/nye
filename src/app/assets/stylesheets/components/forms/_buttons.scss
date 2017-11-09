@@ -10,6 +10,7 @@
         background: $color-light;
         color: $color-brand;
         text-align: center;
+        text-transform: uppercase;
         transition: $transition-duration-base;
 
         @at-root a#{&} {
@@ -23,6 +24,23 @@
         &--block {
             display: block;
             width: 100%;
+        }
+
+
+        &--desktop-size-150 {
+
+            @include mq(lg) {
+                width: 15rem;
+                text-align: center;
+            }
+        }
+
+
+        &--brand-color {
+            @include interact(color, #fff);
+            @include interact(background, $color-base-title);
+            background: $color-brand;
+            color: #fff;
         }
     }
 }
