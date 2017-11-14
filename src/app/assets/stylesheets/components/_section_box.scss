@@ -64,8 +64,6 @@
     > h3 {
       @include text-lg;
     }
-
-
   }
 
   &__nav-box {
@@ -106,16 +104,9 @@
     }
   }
 
-
   &__description {
 
-    @include mq(lg) {
-      margin: 0 30rem;
-    }
-
   }
-
-
 }
 
 .section-next-menu {
@@ -173,7 +164,5 @@
      }
    }
   }
-
-
 
 }

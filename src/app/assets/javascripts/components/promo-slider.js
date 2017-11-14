@@ -25,7 +25,7 @@ $( function() {
     $('.js-promo-slider').slick({
         infinite: true,
         cssEase: 'ease',
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         pauseOnHover: true,
         speed: 660,

@@ -277,6 +277,10 @@ $(function () {
 
     function projectPhotoSlider_init() {
 
+        var slideCenterPadding = ($(window).width() - $('.container:first-child').width()) / 2;
+
+        console.log(slideCenterPadding);
+
         $('.js-project-photo-slider').slick({
             arrows: false,
             dots: true,
@@ -284,16 +288,11 @@ $(function () {
                 return $('<span></span>');
             },
             centerMode: true,
-            centerPadding: '430px',
+            autoplay: true,
+            autoplaySpeed: 4000,
+            centerPadding: slideCenterPadding + 'px',
             slidesToShow: 1,
             responsive: [{
-                breakpoint: 1600,
-                settings: {
-                    centerMode: true,
-                    centerPadding: '230px',
-                    slidesToShow: 1
-                }
-            }, {
                 breakpoint: 767,
                 settings: {
                     centerMode: false,
@@ -356,7 +355,7 @@ $(function () {
     $('.js-promo-slider').slick({
         infinite: true,
         cssEase: 'ease',
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         pauseOnHover: true,
         speed: 660,

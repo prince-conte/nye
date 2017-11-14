@@ -2576,12 +2576,6 @@ a.button {
   display: block;
 }
 
-@media all and (min-device-width: 768px) {
-  .section-box__description {
-    margin: 0 30rem;
-  }
-}
-
 .section-next-menu {
   width: 22rem;
   height: auto;
